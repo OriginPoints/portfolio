@@ -23,9 +23,10 @@ const galleryItems: GalleryItem[] = [
  // { id: 4, title: 'Banner', image: 'https://placehold.co/3500x1500/000000/ffffff?text=Banner', category: 'banners' },
   
   // Thumbnails
-  { id: 6, title: 'Game Thumbnail', image: 'https://i.ibb.co/W4zNHTB9/Drawing-28-sketchpad-1.png', category: 'thumbnails' },
-  { id: 7, title: 'Game Thumbnail', image: 'https://i.ibb.co/LdvmRvd0/ya-afx.png', category: 'thumbnails' },
-  { id: 8, title: 'Settings Thumbnail', image: 'https://i.ibb.co/93Cv8rfj/thumbnail-settings-guide.png', category: 'thumbnails' },
+  { id: 6, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/TsFFt4H/dominating-afx.png', category: 'thumbnails' },
+  { id: 7, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/93Cv8rfj/thumbnail-settings-guide.png', category: 'thumbnails' },
+  { id: 8, title: 'Game Thumbnail', image: 'https://i.ibb.co/W4zNHTB9/Drawing-28-sketchpad-1.png', category: 'thumbnails' },
+  { id: 9, title: 'Game Thumbnail', image: 'https://i.ibb.co/LdvmRvd0/ya-afx.png', category: 'thumbnails' },
 ];
 
 // Animation variants
@@ -180,7 +181,7 @@ export default function Home() {
         <title>Portfolio | Banners & Thumbnails</title>
         <meta name="description" content="Minimalist portfolio of banners and thumbnails" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://i.ibb.co/gL8cKcnZ/origin-logo.png" />
         <style jsx global>{`
           img {
             -webkit-user-drag: none;
