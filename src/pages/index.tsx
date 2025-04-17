@@ -95,7 +95,7 @@ export default function Home() {
     setZoomIndex(0); // Reset zoom level
     
     // Extract colors from the image
-    extractColors(item.image, 6).then(colors => {
+    extractColors(item.image, 3).then(colors => {
       setColorPalette(colors);
     });
   };
@@ -220,7 +220,7 @@ export default function Home() {
                 className="flex justify-center mb-16"
                 variants={itemVariants}
               >
-                <img src="https://i.ibb.co/cXVSxTWM/logo.png" alt="Logo" className="h-16 md:h-20 w-auto mx-auto" />
+                <img src="https://i.ibb.co/dJ7KGKQ4/asdsaddsa.png" alt="Logo" className="h-16 md:h-20 w-auto mx-auto" />
               </motion.div>
               
               <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
