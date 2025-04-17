@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 102, 102, 102;
+  --background-rgb: 255, 255, 255;
+  --stroke-rgb: 221, 221, 221;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-secondary text-white rounded-lg font-medium transition-all hover:bg-opacity-90 hover:shadow-lg;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg border border-stroke;
+  }
+  
+  .gallery-item {
+    @apply relative overflow-hidden rounded-lg shadow-sm border border-stroke;
+  }
+  
+  .gallery-item-overlay {
+    @apply absolute inset-0 bg-secondary bg-opacity-30 opacity-0 transition-opacity duration-300 flex items-center justify-center;
+  }
+  
+  .gallery-item:hover .gallery-item-overlay {
+    @apply opacity-100;
+  }
+}

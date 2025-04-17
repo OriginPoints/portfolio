@@ -1,0 +1,40 @@
+/* Additional security measures to prevent image theft */
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none !important;
+}
+
+/* Re-enable pointer events for specific interactions */
+.gallery-item img {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Prevent text selection */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Disable right-click menu */
+*::selection {
+  background-color: transparent;
+}
+
+/* Hide source code in console */
+@media print {
+  html, body {
+    display: none;
+  }
+}
