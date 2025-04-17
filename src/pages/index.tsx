@@ -25,8 +25,10 @@ const galleryItems: GalleryItem[] = [
   // Thumbnails
   { id: 6, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/TsFFt4H/dominating-afx.png', category: 'thumbnails' },
   { id: 7, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/93Cv8rfj/thumbnail-settings-guide.png', category: 'thumbnails' },
-  { id: 8, title: 'Game Thumbnail', image: 'https://i.ibb.co/W4zNHTB9/Drawing-28-sketchpad-1.png', category: 'thumbnails' },
-  { id: 9, title: 'Game Thumbnail', image: 'https://i.ibb.co/LdvmRvd0/ya-afx.png', category: 'thumbnails' },
+  { id: 8, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/qbfDW82/youtube.png', category: 'thumbnails' },
+  { id: 9, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/rGWMpqpb/youtube2.png', category: 'thumbnails' },
+  { id: 10, title: 'Game Thumbnail', image: 'https://i.ibb.co/W4zNHTB9/Drawing-28-sketchpad-1.png', category: 'thumbnails' },
+  { id: 11, title: 'Game Thumbnail', image: 'https://i.ibb.co/LdvmRvd0/ya-afx.png', category: 'thumbnails' },
 ];
 
 // Animation variants
