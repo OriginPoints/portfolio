@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAntiTheft } from '@/hooks/useAntiTheft';
+import { extractColors } from '@/utils/colorExtractor';
 
 // Define types for our gallery items
 type GalleryItem = {
@@ -91,6 +92,11 @@ export default function Home() {
     setSelectedItem(item);
     setModalOpen(true);
     setZoomIndex(0); // Reset zoom level
+    
+    // Extract colors from the image
+    extractColors(item.image, 6).then(colors => {
+      setColorPalette(colors);
+    });
   };
   
   // Handle closing modal
@@ -131,6 +137,9 @@ export default function Home() {
   // State for cursor position and magnifying glass
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [showMagnifier, setShowMagnifier] = useState(false);
+  
+  // State for color palette
+  const [colorPalette, setColorPalette] = useState<string[]>([]);
   
   // Ref for image container for magnifier calculations
   const imageContainerRef = useRef<HTMLDivElement>(null);
@@ -443,15 +452,42 @@ export default function Home() {
                 
                 {/* Caption */}
                 <motion.div 
-                  className="bg-black bg-opacity-50 p-4 text-center"
+                  className="bg-black bg-opacity-50 p-4"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h3 className="text-xl font-bold text-white mb-1">{selectedItem.title}</h3>
-                  <p className="text-gray-300 text-sm">
+                  <h3 className="text-xl font-bold text-white mb-1 text-center">{selectedItem.title}</h3>
+                  <p className="text-gray-300 text-sm text-center mb-3">
                     Hover over image to inspect details with magnifying glass
                   </p>
+                  
+                  {/* Color Palette - Smaller and at the bottom */}
+                  <div className="mt-2 flex justify-center items-center gap-2 flex-wrap">
+                    {colorPalette.map((color, index) => (
+                      <div 
+                        key={index} 
+                        className="color-swatch relative group"
+                        onClick={() => {
+                          navigator.clipboard.writeText(color)
+                            .then(() => {
+                              console.log('Color copied to clipboard');
+                            })
+                            .catch(err => console.error('Failed to copy color: ', err));
+                        }}
+                      >
+                        <div 
+                          className="w-8 h-8 rounded-md cursor-pointer border border-white shadow-sm transition-all duration-300 transform hover:scale-110 hover:shadow-md"
+                          style={{ backgroundColor: color }}
+                          title={`Click to copy: ${color}`}
+                        />
+                        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-90 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                          {color}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 text-xs text-center mt-1">Click any color to copy</p>
                 </motion.div>
               </motion.div>
             </motion.div>
