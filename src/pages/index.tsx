@@ -23,12 +23,13 @@ const galleryItems: GalleryItem[] = [
  // { id: 4, title: 'Banner', image: 'https://placehold.co/3500x1500/000000/ffffff?text=Banner', category: 'banners' },
   
   // Thumbnails
-  { id: 6, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/TsFFt4H/dominating-afx.png', category: 'thumbnails' },
-  { id: 7, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/93Cv8rfj/thumbnail-settings-guide.png', category: 'thumbnails' },
-  { id: 8, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/qbfDW82/youtube.png', category: 'thumbnails' },
-  { id: 9, title: 'Youtube Thumbnail', image: 'https://i.ibb.co/rGWMpqpb/youtube2.png', category: 'thumbnails' },
-  { id: 10, title: 'Game Thumbnail', image: 'https://i.ibb.co/W4zNHTB9/Drawing-28-sketchpad-1.png', category: 'thumbnails' },
-  { id: 11, title: 'Game Thumbnail', image: 'https://i.ibb.co/LdvmRvd0/ya-afx.png', category: 'thumbnails' },
+  { id: 6, title: 'Thumbnail', image: 'https://i.ibb.co/TsFFt4H/dominating-afx.png', category: 'thumbnails' },
+  { id: 7, title: 'Thumbnail', image: 'https://i.ibb.co/bMys845m/autistic-afx.png', category: 'thumbnails' },
+  { id: 12, title: 'Thumbnail', image: 'https://i.ibb.co/93Cv8rfj/thumbnail-settings-guide.png', category: 'thumbnails' },
+  { id: 11, title: 'Thumbnail', image: 'https://i.ibb.co/LdvmRvd0/ya-afx.png', category: 'thumbnails' },
+  { id: 8, title: 'Thumbnail', image: 'https://i.ibb.co/W4zNHTB9/Drawing-28-sketchpad-1.png', category: 'thumbnails' },
+  { id: 9, title: 'Thumbnail', image: 'https://i.ibb.co/qbfDW82/youtube.png', category: 'thumbnails' },
+  { id: 10, title: 'Thumbnail', image: 'https://i.ibb.co/rGWMpqpb/youtube2.png', category: 'thumbnails' },
 ];
 
 // Animation variants
@@ -206,7 +207,7 @@ export default function Home() {
         `}</style>
       </Head>
       
-      <main className="min-h-screen bg-white text-secondary">
+      <main className="min-h-screen text-secondary">
         
         {/* Category Selector */}
         <div>
@@ -238,7 +239,7 @@ export default function Home() {
                     variants={cardVariants}
                   >
                     <h3 className="text-2xl md:text-3xl font-bold mb-4 text-secondary">Banners</h3>
-                    <p className="text-accent mb-6">Collection of custom banners</p>
+                    <p className="text-accent mb-6">Not all of them as of now</p>
                     <div className="mt-auto">
                       <span className="inline-block px-4 py-2 border border-stroke rounded-lg font-medium text-secondary hover:bg-secondary hover:text-white transition-colors">
                         View
@@ -259,7 +260,7 @@ export default function Home() {
                     variants={cardVariants}
                   >
                     <h3 className="text-2xl md:text-3xl font-bold mb-4 text-secondary">Thumbnails</h3>
-                    <p className="text-accent mb-6">Collection of custom thumbnails</p>
+                    <p className="text-accent mb-6">Custom thumbnails</p>
                     <div className="mt-auto">
                       <span className="inline-block px-4 py-2 border border-stroke rounded-lg font-medium text-secondary hover:bg-secondary hover:text-white transition-colors">
                         View
